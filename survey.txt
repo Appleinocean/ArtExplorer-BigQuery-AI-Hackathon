@@ -1,0 +1,18 @@
+1. Please tell us how many months of experience with BigQuery AI each team member has.
+- Team Member 1 (Jimmy Choi): Approximately 1 month of intensive, hands-on experience gained 
+  directly through this hackathon project.
+
+2. Please tell us how many months of experience with Google Cloud each team member has.
+- Team Member 1 (Jimmy Choi): Approximately 3 months. My prior experience includes architecting and 
+  developing an AI Agent that integrates with Google Analytics 4 (GA4) and BigQuery.
+
+3. We’d love to hear from you and your experience in working with the technology during this hackathon, 
+   positive or negative. Please provide any feedback on your experience with BigQuery AI.
+
+- Overall, the experience was incredibly powerful. The ability to run embedding generation and generative models 
+  like Gemini directly within BigQuery using simple SQL is a game-changer for building AI applications quickly. 
+  The integration of VECTOR_SEARCH makes it a truly end-to-end platform for semantic search. 
+  Initially, I ran into an authentication issue between Kaggle and GCP when using the add-ons feature in a Kaggle notebook. 
+  Removing Kaggle's permissions from my Google account fixed the problem, and development went smoothly after that.
+
+We are incredibly impressed with the capabilities of BigQuery AI and look forward to utilizing it in future projects.

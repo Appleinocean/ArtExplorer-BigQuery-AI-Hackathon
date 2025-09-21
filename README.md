@@ -26,7 +26,24 @@ Museums house humanity's greatest treasures, yet visitors often experience "**ga
 
 ---
 
-### 3. Repository Structure
+### 3. Architecture & Technical Stack
+
+ArtExplorer operates on a serverless architecture using Google Cloud and Kaggle. The data flows through two main components as shown in the diagram below:
+
+```
+[MET Museum API] -> [Python Data Enrichment (Kaggle Notebook)] -> [Google Cloud Storage]
+                                                                          |
+                                                                          v
+                                                             [BigQuery AI Engine]
+                                                              /                  \
+[ML.GENERATE_EMBEDDING] -> [Vector Table] -> [VECTOR_SEARCH] <---> [Interactive App (UI)] <---> [ML.GENATE_TEXT (Gemini)]
+```
+
+*A diagram illustrating the data flow from the pipeline notebook to the final user-facing application.*
+
+---
+
+### 4. Repository Structure
 
 This repository contains all the necessary components for the ArtExplorer project.
 
@@ -36,7 +53,7 @@ This repository contains all the necessary components for the ArtExplorer projec
 
 ---
 
-### 4. How to Reproduce the Project
+### 5. How to Reproduce the Project
 
 To run this project from scratch, please follow these steps:
 
@@ -65,7 +82,7 @@ To run this project from scratch, please follow these steps:
 
 ---
 
-### 5. Project Links
+### 6. Project Links
 
 * Kaggle Writeup & Submission: `https://www.kaggle.com/competitions/bigquery-ai-hackathon/writeups/artexplorer-your-personal-ai-museum-docent`
 * Live Demo Video: `https://youtu.be/peg343OrvPk`

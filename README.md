@@ -67,5 +67,5 @@ To run this project from scratch, please follow these steps:
 
 ### 5. Project Links
 
-* Kaggle Writeup & Submission: `[Link to be added after submission]`
+* Kaggle Writeup & Submission: `https://www.kaggle.com/competitions/bigquery-ai-hackathon/writeups/artexplorer-your-personal-ai-museum-docent`
 * Live Demo Video: `https://youtu.be/peg343OrvPk`

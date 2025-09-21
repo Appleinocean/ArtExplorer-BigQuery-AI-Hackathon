@@ -30,15 +30,28 @@ Museums house humanity's greatest treasures, yet visitors often experience "**ga
 
 ArtExplorer operates on a serverless architecture using Google Cloud and Kaggle. The data flows through two main components as shown in the diagram below:
 
+#### Data Pipeline Architecture (Backend Setup)
+
+This diagram shows the one-time process for ingesting and preparing the art data.
 ```
-[MET Museum API] -> [Python Data Enrichment (Kaggle Notebook)] -> [Google Cloud Storage]
-                                                                          |
-                                                                          v
-                                                             [BigQuery AI Engine]
-                                                              /                  \
-[ML.GENERATE_EMBEDDING] -> [Vector Table] -> [VECTOR_SEARCH] <---> [Interactive App (UI)] <---> [ML.GENATE_TEXT (Gemini)]
+[MET Museum API] ---> [Data Pipeline Notebook on Kaggle] ---> [Embeddings Generated via Vertex AI] ---> [Data stored in BigQuery Table with VECTOR_SEARCH Index]
 ```
 
+#### Application Architecture (User Interaction)
+```
+This diagram illustrates the real-time flow when a user interacts with the application.
+
+[User Input (e.g., "motherly love")] ---> [Application Notebook UI]
+                                            |
+                                            v
+                                [Query BigQuery using VECTOR_SEARCH] ---> [Returns Top Matching Art]
+                                            |
+                                            v
+                                [Sends Art Info to Gemini via ML.GENERATE_TEXT] ---> [Returns AI Docent Story]
+                                            |
+                                            v
+                                [Story Displayed to User]
+```
 *A diagram illustrating the data flow from the pipeline notebook to the final user-facing application.*
 
 ---
